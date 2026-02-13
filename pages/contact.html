@@ -1,0 +1,311 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact &amp; Networking | Data Science Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Space Grotesk"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .grid-bg {
+        background-size: 40px 40px;
+        background-image:
+          linear-gradient(
+            to right,
+            rgba(19, 127, 236, 0.05) 1px,
+            transparent 1px
+          ),
+          linear-gradient(
+            to bottom,
+            rgba(19, 127, 236, 0.05) 1px,
+            transparent 1px
+          );
+      }
+      .glow-accent {
+        background: radial-gradient(
+          circle at 50% 50%,
+          rgba(19, 127, 236, 0.15) 0%,
+          transparent 70%
+        );
+      }
+    </style>
+  </head>
+  <body
+    class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 min-h-screen flex items-center justify-center p-6 relative overflow-hidden"
+  >
+    <nav class="absolute top-8 left-8 z-20">
+      <a
+        class="group flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300"
+        href="index.html"
+      >
+        <span
+          class="material-symbols-outlined text-primary text-xl group-hover:-translate-x-1 transition-transform"
+          >arrow_back</span
+        >
+        <span
+          class="text-sm font-semibold text-slate-600 dark:text-slate-300 group-hover:text-primary transition-colors"
+          >Back to Home</span
+        >
+      </a>
+    </nav>
+    <!-- Background Accents -->
+    <div class="absolute inset-0 grid-bg pointer-events-none"></div>
+    <div
+      class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] glow-accent pointer-events-none"
+    ></div>
+    <div
+      class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] glow-accent pointer-events-none"
+    ></div>
+    <main
+      class="relative z-10 max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+    >
+      <!-- Left Side: Networking Hub -->
+      <div class="space-y-8">
+        <header>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-4"
+          >
+            <span class="relative flex h-2 w-2">
+              <span
+                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+              ></span>
+              <span
+                class="relative inline-flex rounded-full h-2 w-2 bg-primary"
+              ></span>
+            </span>
+            Available for Collaboration
+          </div>
+          <h1
+            class="text-5xl lg:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight"
+          >
+            Let's <span class="text-primary">Connect</span>
+          </h1>
+          <p
+            class="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-md leading-relaxed"
+          >
+            I'm currently looking for new opportunities in Data Science and
+            Machine Learning. Whether you have a specific project in mind or
+            just want to talk shop about neural networks, my inbox is always
+            open.
+          </p>
+        </header>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Social Link: GitHub -->
+          <a
+            class="group flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300"
+            href="https://github.com/Jhonelkour"
+            target="_blank"
+            rel="noopener"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors"
+            >
+              <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-wider text-slate-500"
+              >
+                Code
+              </p>
+              <p class="font-medium">GitHub</p>
+            </div>
+          </a>
+          <!-- Social Link: LinkedIn -->
+          <a
+            class="group flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300"
+            href="https://www.linkedin.com/in/oussama-el-kourdini/"
+            target="_blank"
+            rel="noopener"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors"
+            >
+              <svg class="w-6 h-6 fill-current" viewbox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                ></path>
+              </svg>
+            </div>
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-wider text-slate-500"
+              >
+                Network
+              </p>
+              <p class="font-medium">LinkedIn</p>
+            </div>
+          </a>
+          <!-- Kaggle removed per request -->
+          <!-- Social Link: Email -->
+          <a
+            class="group flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all duration-300"
+            href="mailto:elkourdinioussama@gmail.com"
+          >
+            <div
+              class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 group-hover:bg-primary group-hover:text-white transition-colors"
+            >
+              <span class="material-icons">alternate_email</span>
+            </div>
+            <div>
+              <p
+                class="text-xs font-semibold uppercase tracking-wider text-slate-500"
+              >
+                Direct
+              </p>
+              <p class="font-medium">Email</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- Right Side: Contact Form -->
+      <div
+        class="bg-white dark:bg-slate-900/80 backdrop-blur-md p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl"
+      >
+        <h3 class="text-2xl font-bold mb-6 text-slate-900 dark:text-white">
+          Send a Message
+        </h3>
+        <!-- To enable email forwarding when hosted: create a Formspree form and replace the action URL with your Formspree endpoint (e.g. https://formspree.io/f/abcd1234) -->
+        <form
+          action="https://formspree.io/f/xojneleg"
+          class="space-y-5"
+          method="POST"
+          id="contactForm"
+        >
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="space-y-2">
+              <label class="text-sm font-medium text-slate-500" for="name"
+                >Full Name</label
+              >
+              <input
+                class="w-full bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-slate-900 dark:text-white placeholder:text-slate-400"
+                id="name"
+                name="name"
+                placeholder="John Doe"
+                type="text"
+                required
+              />
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-medium text-slate-500" for="email"
+                >Email Address</label
+              >
+              <input
+                class="w-full bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-slate-900 dark:text-white placeholder:text-slate-400"
+                id="email"
+                name="email"
+                placeholder="john@example.com"
+                type="email"
+                required
+              />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-slate-500" for="subject"
+              >Email Subject</label
+            >
+            <input
+              class="w-full bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-slate-900 dark:text-white placeholder:text-slate-400"
+              id="subject"
+              name="subject"
+              placeholder="Project Inquiry / Job Opportunity"
+              type="text"
+              required
+            />
+          </div>
+          <div class="space-y-2">
+            <label class="text-sm font-medium text-slate-500" for="message"
+              >Message</label
+            >
+            <textarea
+              class="w-full bg-slate-50 dark:bg-background-dark border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-slate-900 dark:text-white placeholder:text-slate-400 resize-none"
+              id="message"
+              name="message"
+              placeholder="Tell me about your project or role..."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+          <button
+            class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-6 rounded-lg transition-all transform active:scale-[0.98] flex items-center justify-center gap-2 shadow-lg shadow-primary/25"
+            type="submit"
+          >
+            <span>Send Message</span>
+            <span class="material-icons text-lg">send</span>
+          </button>
+          <p id="formMessage" class="mt-4 text-center text-sm"></p>
+        </form>
+        <script>
+          // Simple client-side handling for Formspree responses
+          const form = document.getElementById("contactForm");
+          const msg = document.getElementById("formMessage");
+          form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            msg.textContent = "Sending...";
+            const data = new FormData(form);
+            try {
+              const res = await fetch(form.action, {
+                method: "POST",
+                headers: { Accept: "application/json" },
+                body: data,
+              });
+              if (res.ok) {
+                msg.textContent = "Message sent — thank you!";
+                form.reset();
+              } else {
+                const json = await res.json();
+                msg.textContent =
+                  json && json.error ? json.error : "Error sending message.";
+              }
+            } catch (err) {
+              msg.textContent = "Network error — please try again later.";
+            }
+          });
+        </script>
+        <p class="mt-6 text-center text-xs text-slate-500">
+          Response time: Usually within 24-48 hours.
+        </p>
+      </div>
+    </main>
+    <!-- Map/Location Indicator removed per request -->
+  </body>
+</html>

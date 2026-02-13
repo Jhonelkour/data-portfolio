@@ -1,0 +1,474 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Projects Gallery | Data Science Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Space Grotesk"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #137fec44;
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #137fec;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display"
+  >
+    <!-- Global Navigation -->
+    <nav
+      class="sticky top-0 z-50 border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md"
+    >
+        <div
+          class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
+        >
+        <a
+          href="index.html"
+          class="flex items-center gap-2 hover:opacity-80 transition-opacity"
+        >
+          <div
+            class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center"
+          >
+            <span class="material-icons text-white text-sm">analytics</span>
+          </div>
+          <span class="text-xl font-bold tracking-tight"
+            >OUSSAMA<span class="text-primary"> EL-KOURDINI</span></span
+          >
+        </a>
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="index.html"
+            >About</a
+          >
+          <a class="text-sm font-medium text-primary" href="projects.html"
+            >Projects</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="certifications.html"
+            >Certifications</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="Resume.html"
+            >Resume</a
+          >
+          <a
+            class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition-all"
+            href="contact.html"
+            >Contact</a
+          >
+              </div>
+      </div>
+    </nav>
+    <div class="max-w-7xl mx-auto px-6 py-8 flex gap-8">
+      <!-- Sidebar Filter -->
+      <aside class="w-64 flex-shrink-0 hidden lg:block">
+        <div class="sticky top-24 space-y-8">
+          <!-- Search -->
+          <div>
+            <h3
+              class="text-xs font-bold uppercase tracking-widest text-primary mb-4"
+            >
+              Search
+            </h3>
+            <div class="relative">
+              <input
+                class="w-full bg-primary/5 border border-primary/20 rounded-lg py-2 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                placeholder="Project name..."
+                type="text"
+              />
+              <span
+                class="material-icons absolute left-3 top-2.5 text-primary/50 text-sm"
+                >search</span
+              >
+            </div>
+          </div>
+          <!-- Categories -->
+          <div>
+            <h3
+              class="text-xs font-bold uppercase tracking-widest text-primary mb-4"
+            >
+              Categories
+            </h3>
+              <div class="space-y-3">
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  class="category-checkbox rounded border-primary/30 text-primary focus:ring-primary bg-transparent"
+                  type="checkbox"
+                  id="cat-ml"
+                  value="Machine Learning"
+                />
+                <span class="text-sm group-hover:text-primary transition-colors"
+                  >Machine Learning</span
+                >
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  class="category-checkbox rounded border-primary/30 text-primary focus:ring-primary bg-transparent"
+                  type="checkbox"
+                  id="cat-nlp"
+                  value="Natural Language Processing"
+                />
+                <span class="text-sm group-hover:text-primary transition-colors"
+                  >Natural Language Processing</span
+                >
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  class="category-checkbox rounded border-primary/30 text-primary focus:ring-primary bg-transparent"
+                  type="checkbox"
+                  id="cat-dv"
+                  value="Data Visualization"
+                />
+                <span class="text-sm group-hover:text-primary transition-colors"
+                  >Data Visualization</span
+                >
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer group">
+                <input
+                  class="category-checkbox rounded border-primary/30 text-primary focus:ring-primary bg-transparent"
+                  type="checkbox"
+                  id="cat-cv"
+                  value="Computer Vision"
+                />
+                <span class="text-sm group-hover:text-primary transition-colors"
+                  >Computer Vision</span
+                >
+              </label>
+            </div>
+              <div class="mt-4">
+                <button id="applyCategoriesBtn" class="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold">Confirm</button>
+              </div>
+          </div>
+          <!-- Tech Stack -->
+          <div>
+            <h3
+              class="text-xs font-bold uppercase tracking-widest text-primary mb-4"
+            >
+              Tech Stack
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              <button
+                class="px-3 py-1 text-xs border border-primary/30 rounded-full hover:bg-primary hover:text-white transition-all"
+              >
+                Python
+              </button>
+              <button
+                class="px-3 py-1 text-xs border border-primary/30 rounded-full hover:bg-primary hover:text-white transition-all"
+              >
+                PyTorch
+              </button>
+              <button
+                class="px-3 py-1 text-xs border border-primary/30 rounded-full hover:bg-primary hover:text-white transition-all"
+              >
+                Scikit-learn
+              </button>
+              <button
+                class="px-3 py-1 text-xs border border-primary/30 rounded-full hover:bg-primary hover:text-white transition-all"
+              >
+                Pandas
+              </button>
+              <button
+                class="px-3 py-1 text-xs border border-primary/30 rounded-full hover:bg-primary hover:text-white transition-all"
+              >
+                SQL
+              </button>
+              <button
+                class="px-3 py-1 text-xs border border-primary/30 rounded-full hover:bg-primary hover:text-white transition-all"
+              >
+                Tableau
+              </button>
+            </div>
+          </div>
+        </div>
+        <p id="noResults" class="text-center text-slate-500 hidden mt-8">No projects found for the selected category.</p>
+        <script>
+          // Category filter: when none selected show all; otherwise show cards matching any checked category
+          (function () {
+            const checkboxes = Array.from(document.querySelectorAll('.category-checkbox'));
+            const grid = document.getElementById('projectsGrid');
+            const cards = () => Array.from(grid.children);
+            const noResults = document.getElementById('noResults');
+
+            function updateFilter() {
+              const checked = checkboxes.filter(c => c.checked).map(c => c.value);
+              if (checked.length === 0) {
+                cards().forEach(c => (c.style.display = ''));
+                noResults.classList.add('hidden');
+                return;
+              }
+              let visible = 0;
+              cards().forEach(c => {
+                const cat = (c.getAttribute('data-category') || '').split(',').map(s => s.trim());
+                const match = checked.some(val => cat.includes(val));
+                if (match) {
+                  c.style.display = '';
+                  visible += 1;
+                } else {
+                  c.style.display = 'none';
+                }
+              });
+                noResults.classList.toggle('hidden', visible > 0);
+                console.debug('Filter:', checked, 'visible:', visible);
+            }
+
+            // Apply filters only when the Confirm button is clicked
+            const applyBtn = document.getElementById('applyCategoriesBtn');
+            if (applyBtn) applyBtn.addEventListener('click', updateFilter);
+            // initialize (show all by default)
+            document.addEventListener('DOMContentLoaded', updateFilter);
+          })();
+        </script>
+      </aside>
+      <!-- Main Content -->
+      <main class="flex-1">
+        <!-- Grid Header -->
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h1 class="text-3xl font-bold mb-2">
+              Projects <span class="text-primary">Gallery</span>
+            </h1>
+            <p class="text-slate-500 dark:text-slate-400 text-sm">
+              Exploring data through code and visualization.
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="text-xs text-slate-500 hidden sm:block">Sort by:</span>
+            <select
+              class="bg-primary/5 border border-primary/20 rounded-lg text-sm px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary/50 cursor-pointer"
+            >
+              <option>Latest Published</option>
+              <option>Complexity High-Low</option>
+              <option>Featured First</option>
+            </select>
+          </div>
+        </div>
+        <!-- Projects Grid -->
+        <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6">
+          <!-- Project Card 1: Featured -->
+          <div
+            data-category="Machine Learning"
+            class="group relative md:col-span-2 bg-primary/5 dark:bg-white/5 border border-primary/20 rounded-xl overflow-hidden hover:border-primary/50 transition-all flex flex-col md:flex-row"
+          >
+            <div class="md:w-1/2 overflow-hidden h-64 md:h-auto">
+              <img
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                data-alt="Data visualization dashboard with blue line charts"
+                src="../assets/images/Price-Prediction-in-Online-Car-Marketplaces.png"
+              />
+            </div>
+            <div class="p-8 flex flex-col justify-between md:w-1/2">
+              <div>
+                <div class="flex gap-2 mb-4">
+                  <span
+                    class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-primary text-white rounded-full"
+                    >Featured</span
+                  >
+                  <span
+                    class="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-primary/20 text-primary rounded-full"
+                    >Machine Learning</span
+                  >
+                </div>
+                <h2
+                  class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors"
+                >
+                  Avito Used Car Price Predictor
+                </h2>
+                <p
+                  class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6"
+                >
+                  Built an automated data collection pipeline using web scraping
+                  and trained ensemble learning models for real-time used car
+                  price prediction.
+                </p>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2"></div>
+                <div class="flex gap-3">
+                  <a
+                    href="https://avito-used-car-price-predictor.streamlit.app/"
+                    target="_blank"
+                    rel="noopener"
+                    class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition"
+                  >
+                    Open App
+                  </a>
+                  <a
+                    href="https://github.com/Jhonelkour/avito-used-car-price-predictor"
+                    target="_blank"
+                    rel="noopener"
+                    class="px-4 py-2 border border-primary/20 text-primary text-sm font-semibold rounded-lg hover:bg-primary/10 transition flex items-center gap-2"
+                  >
+                    View Case Study
+                    <span class="material-icons text-sm">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div
+            data-category="Machine Learning"
+            class="bg-primary/5 dark:bg-white/5 border border-primary/20 rounded-xl overflow-hidden hover:border-primary/50 transition-all flex flex-col"
+          >
+            <div class="h-48 overflow-hidden bg-background-dark/50 relative">
+              <img
+                class="w-full h-full object-cover opacity-60"
+                data-alt="Credit risk model dashboard and evaluation metrics"
+                src="../assets/images/use-case-credit-risk_2-cover.jpg"
+              />
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <div class="flex gap-2 mb-3">
+                <span
+                  class="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider bg-primary/20 text-primary rounded-full"
+                  >Credit Risk</span
+                >
+              </div>
+              <h3 class="text-lg font-bold mb-2">
+                Credit Risk Prediction – Loan Default Classification
+              </h3>
+              <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 flex-1">
+                Developed a machine learning model to predict loan default risk,
+                incorporating class imbalance handling and decision threshold
+                calibration to optimize bank profitability (Metric: AUC-ROC).
+                This system enables automated loan approvals while minimizing
+                financial losses and maximizing business opportunities.
+              </p>
+              <div class="flex items-center justify-between mt-auto">
+                <div></div>
+                <div class="flex gap-3">
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener"
+                    class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary/90 transition"
+                  >
+                    Open App
+                  </a>
+                  <a
+                    href="https://github.com/Jhonelkour/bank-credit-scoring-model"
+                    target="_blank"
+                    rel="noopener"
+                    class="px-4 py-2 border border-primary/20 text-primary text-sm font-semibold rounded-lg hover:bg-primary/10 transition flex items-center gap-2"
+                  >
+                    View Case Study
+                    <span class="material-icons text-sm">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card: Netflix Movies & TV Shows Analysis -->
+          <div
+            data-category="Data Visualization"
+            class="bg-primary/5 dark:bg-white/5 border border-primary/20 rounded-xl overflow-hidden hover:border-primary/50 transition-all flex flex-col"
+          >
+            <div class="h-48 overflow-hidden bg-background-dark/50 relative">
+              <img
+                class="w-full h-full object-cover opacity-60"
+                data-alt="Dataset preview and visualizations for Netflix titles"
+                src="../assets/images/netflix-symbol-black.png"
+              />
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <div class="flex gap-2 mb-3">
+                <span
+                  class="px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider bg-primary/20 text-primary rounded-full"
+                  >Data Analysis</span
+                >
+              </div>
+              <h3 class="text-lg font-bold mb-2">
+                Netflix Movies &amp; TV Shows Analysis
+              </h3>
+              <p class="text-slate-500 dark:text-slate-400 text-sm mb-6 flex-1">
+                Performed exploratory data analysis on 8,000+ Netflix titles to
+                identify content trends, production patterns, and strategic
+                insights into audience preferences using statistical analysis
+                and data visualization.
+              </p>
+              <div class="flex items-center justify-between mt-auto">
+                <div></div>
+                <div class="flex gap-3">
+                  <a
+                    href="https://github.com/Jhonelkour/Netflix-Movies-and-TV-Shows-Analysis"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="px-4 py-2 border border-primary/20 text-primary text-sm font-semibold rounded-lg hover:bg-primary/10 transition flex items-center gap-2"
+                  >
+                    View Case Study
+                    <span class="material-icons text-sm">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+            <!-- Footer -->
+    <footer class="border-t border-primary/10 mt-20 py-12 bg-primary/5">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6"
+      >
+        <a
+          href="index.html"
+          class="text-center md:text-left hover:opacity-80 transition-opacity"
+        >
+          <p class="text-sm text-slate-500 dark:text-slate-400">
+            © 2026 Data Science Portfolio. Built with precision and Love.
+          </p>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

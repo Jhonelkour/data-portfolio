@@ -1,0 +1,473 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Data Science Portfolio | Insights &amp; Impact</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#2b7cee",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101822",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .grid-pattern {
+        background-image: radial-gradient(
+          circle at 1px 1px,
+          #2b7cee15 1px,
+          transparent 0
+        );
+        background-size: 40px 40px;
+      }
+      .glow-effect {
+        box-shadow: 0 0 20px rgba(43, 124, 238, 0.15);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen selection:bg-primary selection:text-white"
+  >
+    <!-- Grid Background Layer -->
+    <div class="fixed inset-0 grid-pattern pointer-events-none z-0"></div>
+    <!-- Navigation -->
+    <nav
+      class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center space-x-2">
+          <a
+            href="../pages/home.html"
+            class="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+          >
+            <div
+              class="w-8 h-8 bg-primary rounded flex items-center justify-center"
+            >
+              <span class="text-white font-bold text-xl">O</span>
+            </div>
+            <span class="text-xl font-bold tracking-tight"
+              >OUSSAMA EL-KOURDINI</span
+            >
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="home.html"
+            >Home</a
+          >
+          <a
+            class="text-sm font-medium text-slate-500 hover:text-primary transition-colors"
+            href="projects.html"
+            >Projects</a
+          >
+          <a
+            class="text-sm font-medium text-slate-500 hover:text-primary transition-colors"
+            href="certifications.html"
+            >Certifications</a
+          >
+          <a
+            class="text-sm font-medium text-slate-500 hover:text-primary transition-colors"
+            href="Resume.html"
+            >Resume</a
+          >
+          <a
+            class="px-5 py-2.5 bg-primary/10 text-primary rounded-lg font-medium hover:bg-primary hover:text-white transition-all"
+            href="contact.html"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main class="relative z-10">
+      <!-- Hero Section -->
+      <section
+        class="max-w-7xl mx-auto px-6 py-24 md:py-32 relative flex flex-col md:flex-row items-center justify-between gap-12"
+      >
+        <div class="flex-1 text-center md:text-left">
+          <div
+            class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold mb-6"
+          >
+            AVAILABLE FOR INTERNSHIPS 2024
+          </div>
+          <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-6">
+            Hi, I'm <span class="text-primary">OUSSAMA EL-KOURDINI</span><br />
+            Data Scientist
+          </h1>
+          <p class="text-xl md:text-2xl text-slate-400 mb-10 max-w-2xl">
+            Turning complex data into
+            <span class="text-white border-b-2 border-primary"
+              >actionable insights</span
+            >. Specializing in predictive modeling and visual storytelling.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start"
+          >
+            <button
+              class="w-full sm:w-auto px-8 py-4 bg-primary text-white rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(19,127,236,0.4)] transition-all"
+            >
+              View My Projects
+            </button>
+            <a
+              href="../assets/Cv Oussama El-Kourdini.pdf"
+              download
+              class="w-full sm:w-auto px-8 py-4 bg-background-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-lg hover:border-primary transition-all flex items-center justify-center gap-2"
+            >
+              <span class="material-symbols-outlined text-xl">download</span>
+              Download CV
+            </a>
+          </div>
+        </div>
+        <div class="flex-1 relative">
+          <div class="relative w-72 h-72 md:w-[450px] md:h-[450px]">
+            <!-- Abstract Background Shapes -->
+            <div
+              class="absolute -top-4 -right-4 w-full h-full border-2 border-primary/30 rounded-full animate-pulse"
+            ></div>
+            <div
+              class="absolute -bottom-4 -left-4 w-full h-full border-2 border-primary/10 rounded-full"
+            ></div>
+            <!-- Main Profile Image Placeholder -->
+            <div
+              class="relative w-full h-full rounded-full overflow-hidden border-4 border-background-dark shadow-2xl z-10"
+            >
+              <img
+                alt="Professional Portrait"
+                class="w-full h-full object-cover"
+                data-alt="Professional portrait of a data scientist wearing a sweater"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTxq7K7xcq2TFBuzxJC0n60eojxRLMl4QNbOwd1Z9MqMWj8srihNWTlw8zgFBAKJlKCXm6XzlXKKeKkoBw4QsFP3xgXCTFAqWbqPIlQzyj8BER1PyO627OpdMXsxmKmz-l--3mmBUrFJ09VBNL_BrGXOtJd5QpaMwHxVjLEaRWPuenH92ahcPTn8fgV9RQ5_hhwfYSoiyI4F-SwBL75bdJtQPsjikeu1xStG6nSJfweeMH7ZOCyMscm8Alcr8B6_EnPaRR9fZuXEo"
+              />
+            </div>
+            <!-- Floating Tech Badges -->
+            <div
+              class="absolute top-10 -left-6 bg-background-dark/80 backdrop-blur shadow-xl border border-primary/20 p-3 rounded-xl z-20 hidden lg:block"
+            >
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >database</span
+              >
+            </div>
+            <div
+              class="absolute bottom-20 -right-6 bg-background-dark/80 backdrop-blur shadow-xl border border-primary/20 p-3 rounded-xl z-20 hidden lg:block"
+            >
+              <span class="material-symbols-outlined text-primary text-3xl"
+                >insights</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Tech Stack Section -->
+      <section
+        class="py-24 px-6 relative border-y border-primary/5 bg-slate-50/50 dark:bg-white/5 backdrop-blur-sm"
+      >
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="flex flex-col md:flex-row items-end justify-between mb-16 space-y-4 md:space-y-0"
+          >
+            <div class="max-w-xl">
+              <h2 class="text-3xl font-bold mb-4">Core Tech Stack</h2>
+              <p class="text-slate-500 dark:text-slate-400">
+                My technical arsenal for processing, analyzing, and visualizing
+                complex datasets across diverse environments.
+              </p>
+            </div>
+            <div
+              class="hidden md:block h-px flex-1 mx-12 bg-gradient-to-r from-primary/20 to-transparent"
+            ></div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            <!-- Python -->
+            <div
+              class="group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 mb-6 text-primary flex items-center justify-center"
+              >
+                <img
+                  src="../assets/images/Python.svg"
+                  alt="Python logo"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <h3 class="font-bold text-lg mb-2">Python</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                Pandas, NumPy, Scikit-Learn
+              </p>
+            </div>
+            <!-- SQL -->
+            <div
+              class="group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 mb-6 text-primary flex items-center justify-center"
+              >
+                <img
+                  src="../assets/images/SQL.svg"
+                  alt="SQL logo"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <h3 class="font-bold text-lg mb-2">SQL</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                PostgreSQL, MySQL, Microsoft SQL Server
+              </p>
+            </div>
+            <!-- Power BI -->
+            <div
+              class="group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 mb-6 text-primary flex items-center justify-center"
+              >
+                <img
+                  src="../assets/images/Power bi.svg"
+                  alt="Power BI logo"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <h3 class="font-bold text-lg mb-2">Power BI</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                BI, Visual Storytelling
+              </p>
+            </div>
+            <!-- TensorFlow -->
+            <div
+              class="group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 mb-6 text-primary flex items-center justify-center"
+              >
+                <img
+                  src="../assets/images/TensorFlow.svg"
+                  alt="TensorFlow logo"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <h3 class="font-bold text-lg mb-2">TensorFlow</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                Deep Learning, Keras, CNNs
+              </p>
+            </div>
+            <!-- Tableau -->
+            <div
+              class="group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300"
+            >
+              <div
+                class="w-12 h-12 mb-6 text-primary flex items-center justify-center"
+              >
+                <img
+                  src="../assets/images/Tableau.svg"
+                  alt="Tableau logo"
+                  class="w-full h-full object-contain"
+                />
+              </div>
+              <h3 class="font-bold text-lg mb-2">Tableau</h3>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                BI, Visual Storytelling
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Featured Projects Preview -->
+      <section class="py-32 px-6">
+        <div class="max-w-7xl mx-auto">
+          <div class="flex items-center justify-between mb-16">
+            <h2 class="text-4xl font-bold">Featured Projects</h2>
+            <a
+              class="text-primary font-medium flex items-center space-x-2 group"
+              href="../pages/projects.html"
+            >
+              <span>View All Projects</span>
+              <span
+                class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <!-- Project Card 1 -->
+            <div class="group cursor-pointer">
+              <div
+                class="aspect-video w-full overflow-hidden rounded-2xl mb-6 bg-slate-200 dark:bg-slate-800 relative"
+              >
+                <img
+                  alt="Market Analysis Project"
+                  class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                  data-alt="Data visualization dashboard showing market trends"
+                  src="../assets/images/car-price-predict.png"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"
+                ></div>
+              </div>
+              <div class="flex items-center space-x-3 mb-4">
+                <span
+                  class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded"
+                  >Machine Learning</span
+                >
+                <span class="text-slate-500 text-sm italic">May 2025</span>
+              </div>
+              <a
+                href="https://avito-used-car-price-predictor.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-2xl font-bold mb-3 bg-primary/10 text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition-colors"
+              >
+                Avito Used Car Price Predictor
+              </a>
+              <p class="text-slate-500 dark:text-slate-400 line-clamp-2">
+                Built an automated data collection pipeline using web scraping
+                and trained ensemble learning models for real-time used car
+                price prediction.
+              </p>
+            </div>
+            <!-- Project Card 2 -->
+            <div class="group cursor-pointer">
+              <div
+                class="aspect-video w-full overflow-hidden rounded-2xl mb-6 bg-slate-200 dark:bg-slate-800 relative"
+              >
+                <img
+                  alt="Credit Risk Decision System dashboard showing model predictions and risk scores"
+                  class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500 group-hover:scale-105"
+                  src="../assets/images/use-case-credit-risk_2-cover.jpg"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"
+                ></div>
+              </div>
+
+              <div class="flex items-center space-x-3 mb-4">
+                <span
+                  class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase rounded"
+                  >Machine Learning</span
+                >
+                <span class="text-slate-500 text-sm italic">Nov 2025</span>
+              </div>
+
+              <h3
+                class="text-2xl font-bold mb-3 group-hover:text-primary transition-colors"
+              >
+                Credit Risk Decision System
+              </h3>
+
+              <p class="text-slate-500 dark:text-slate-400 line-clamp-2">
+                Developed a machine learning model to predict credit default
+                risk, incorporating class imbalance handling and decision
+                threshold calibration to optimize profitability (Metric:
+                AUC-ROC).
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="py-24 px-6">
+        <div
+          class="max-w-4xl mx-auto rounded-3xl bg-primary p-12 text-center text-white relative overflow-hidden"
+        >
+          <!-- Abstract Pattern Over CTA -->
+          <div
+            class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"
+          ></div>
+          <div
+            class="absolute bottom-0 left-0 w-64 h-64 bg-background-dark/20 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"
+          ></div>
+          <h2 class="text-4xl font-bold mb-6 relative z-10">
+            Ready to build something impactful?
+          </h2>
+          <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto relative z-10">
+            I'm currently seeking internship opportunities for Fall 2024. Let's
+            discuss how data can transform your workflow.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 relative z-10"
+          >
+            <a
+              class="px-10 py-4 bg-white text-primary rounded-xl font-bold hover:shadow-xl transition-all"
+              href="contact.html"
+              >Get In Touch</a
+            >
+            <a
+              class="px-10 py-4 border border-white/30 bg-white/10 backdrop-blur-md rounded-xl font-bold hover:bg-white/20 transition-all"
+              href="https://www.linkedin.com/in/oussama-el-kourdini/"
+              >My LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-primary/10">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0"
+      >
+        <div class="flex flex-col items-center md:items-start space-y-2">
+          <a
+            href="../pages/home.html"
+            class="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+          >
+            <div
+              class="w-6 h-6 bg-primary rounded flex items-center justify-center"
+            >
+              <span class="text-white font-bold text-sm">O</span>
+            </div>
+            <span class="font-bold tracking-tight">OUSSAMA EL-KOURDINI</span>
+          </a>
+          <p class="text-slate-500 text-xs">
+            © 2026 Oussama El-Kourdini. Built with precision and Love.
+          </p>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a
+            class="text-slate-400 hover:text-primary transition-colors"
+            href="https://github.com/Jhonelkour"
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            class="text-slate-400 hover:text-primary transition-colors"
+            href="https://www.linkedin.com/in/oussama-el-kourdini/"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

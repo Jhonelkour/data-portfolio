@@ -1,0 +1,554 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Professional Resume | Data Science Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#137fec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              display: ["Space Grotesk"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Space Grotesk", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-display min-h-screen"
+  >
+    <!-- Top Navigation -->
+    <nav
+      class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-primary/20"
+    >
+      <div
+        class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 bg-primary rounded flex items-center justify-center"
+          >
+            <span class="text-white font-bold">DS</span>
+          </div>
+          <span class="font-bold text-xl tracking-tight dark:text-white"
+            >PORTFOLIO</span
+          >
+        </div>
+        <div
+          class="flex gap-8 items-center text-sm font-medium uppercase tracking-widest"
+        >
+          <a class="hover:text-primary transition-colors" href="index.html"
+            >Home</a
+          >
+          <a class="hover:text-primary transition-colors" href="projects.html"
+            >Projects</a
+          >
+          <a
+            class="text-primary border-b-2 border-primary pb-1"
+            href="Resume.html"
+            >Resume</a
+          >
+          <a class="hover:text-primary transition-colors" href="contact.html"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main class="max-w-6xl mx-auto px-6 py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Sidebar (1/3) -->
+        <aside class="space-y-10">
+          <!-- Profile Section -->
+          <div class="space-y-4">
+            <img
+              class="w-32 h-32 rounded-xl object-cover border-2 border-primary mb-6 shadow-lg shadow-primary/10"
+              data-alt="Professional headshot of a data science student"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe0LA2D-SiiiM7UpN_4fLV79a-gQR0_A6jLg2kY-SYC4UAKDwlCRZ3WM1ix2RYb8JrJ8X5Zd1mTBEOdN8Rl86Izm5_g11Y5_q9ndeub9w1X3RVQRmv6hGnu_zpMo_-cqBGXfpS95uULkTsidKTngNL2qNBajRbpCmrwjXCHqSaI8rLkwY4hkWm_0k2TmgjjTF5OHnf2yzmZAX_mYGr-qi5vgjHy8j01yAlHWPhzhIm3EbtPAtutizmGKa_CU9MAEHn34nHVgvmbZc"
+            />
+            <div>
+              <h1 class="text-3xl font-bold dark:text-white">
+                Oussama El-Kourdini
+              </h1>
+              <p class="text-primary font-medium">Data Scientist</p>
+            </div>
+            <div class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              <div class="flex items-center gap-2">
+                <span class="material-icons text-primary text-base"
+                  >location_on</span
+                >
+                <span>Oued Zem, Ma</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-icons text-primary text-base">mail</span>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="mailto:elkourdinioussama@gmail.com"
+                  >elkourdinioussama@gmail.com</a
+                >
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-icons text-primary text-base">link</span>
+                <a
+                  class="hover:text-primary transition-colors"
+                  href="https://github.com/Jhonelkour"
+                  >https://github.com/Jhonelkour</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Download PDF Action -->
+          <a
+            href="../assets/Cv Oussama El-Kourdini.pdf"
+            download
+            class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg flex items-center justify-center gap-3 transition-all transform hover:scale-[1.02]"
+          >
+            <span class="material-icons">download</span>
+            DOWNLOAD FULL RESUME (PDF)
+          </a>
+          <!-- Technical Skills -->
+          <section class="space-y-4">
+            <h3
+              class="text-lg font-bold uppercase tracking-widest border-l-4 border-primary pl-3 dark:text-white"
+            >
+              Technical Skills
+            </h3>
+            <div class="space-y-6">
+              <div>
+                <p
+                  class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-tighter"
+                >
+                  Programming &amp; Core
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >Python</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >SQL</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >Java</span
+                  >
+                </div>
+              </div>
+              <div>
+                <p
+                  class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-tighter"
+                >
+                  Data Science &amp; ML
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >PyTorch</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >Scikit-learn</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >Pandas</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >NLP</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >TFT</span
+                  >
+                </div>
+              </div>
+              <div>
+                <p
+                  class="text-xs font-bold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-tighter"
+                >
+                  Tools &amp; Platforms
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >Azure</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >Docker</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >Tableau</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >Git</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-primary/10 text-primary border border-primary/20 rounded text-sm font-medium"
+                    >Power bi</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Education -->
+          <section class="space-y-4">
+            <h3
+              class="text-lg font-bold uppercase tracking-widest border-l-4 border-primary pl-3 dark:text-white"
+            >
+              Education
+            </h3>
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-bold dark:text-white">
+                  National School of Applied Sciences, Khouribga
+                </h4>
+                <p class="text-primary text-sm">
+                  Master Degree in Artificial Intelligence Engineering,
+                  Digitalization, and Data Science
+                </p>
+                <p class="text-xs text-slate-500 mt-1 italic">
+                  October 2024 – July 2026
+                </p>
+              </div>
+              <div>
+                <h4 class="font-bold dark:text-white">
+                  ALX Africa Data Analytics, Casablanca
+                </h4>
+                <p class="text-primary text-sm">
+                  6-month Training in Data Analytics
+                </p>
+                <p class="text-xs text-slate-500 mt-1 italic">
+                  March 2024 – September 2024
+                </p>
+              </div>
+              <div>
+                <h4 class="font-bold dark:text-white">
+                  Sultan Moulay Slimane University, Béni Mellal
+                </h4>
+                <p class="text-primary text-sm">
+                  Bachelor's Degree in Banking Professions
+                </p>
+                <p class="text-xs text-slate-500 mt-1 italic">
+                  October 2018 – July 2019
+                </p>
+              </div>
+              <div>
+                <h4 class="font-bold dark:text-white">
+                  Specialized Institute of Applied Technology, Oued Zem
+                </h4>
+                <p class="text-primary text-sm">
+                  (Diploma / Specialized Studies)
+                </p>
+                <p class="text-xs text-slate-500 mt-1 italic">
+                  October 2015 – July 2017
+                </p>
+              </div>
+            </div>
+          </section>
+        </aside>
+        <!-- Main Content (2/3) -->
+        <div class="lg:col-span-2 space-y-12">
+          <!-- Professional Experience -->
+          <section class="space-y-8">
+            <div class="flex items-center gap-4">
+              <h2
+                class="text-2xl font-bold dark:text-white whitespace-nowrap uppercase tracking-widest"
+              >
+                Professional Experience
+              </h2>
+              <div class="h-px w-full bg-slate-200 dark:bg-primary/20"></div>
+            </div>
+            <div class="space-y-10">
+              <!-- Entry 1 -->
+              <div class="relative pl-8 border-l-2 border-primary/20">
+                <div
+                  class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary shadow-lg shadow-primary/40"
+                ></div>
+                <div
+                  class="flex flex-col md:flex-row md:justify-between md:items-start mb-4"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold dark:text-white">
+                      Commercial Support Officer (Final-Year Internship)
+                    </h3>
+                    <p class="text-primary font-medium">
+                      BMCE Bank of Africa — Oued Zem, Morocco
+                    </p>
+                  </div>
+                  <div class="mt-1 md:mt-0 text-right">
+                    <span
+                      class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-bold uppercase tracking-widest"
+                      >May 2019</span
+                    >
+                  </div>
+                </div>
+                <ul
+                  class="space-y-3 text-slate-600 dark:text-slate-400 leading-relaxed"
+                >
+                  <li class="flex gap-2">
+                    <span class="text-primary mt-1">•</span
+                    ><span
+                      >Processed and ensured the proper execution of counter
+                      (front-desk) banking operations.</span
+                    >
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary mt-1">•</span
+                    ><span
+                      >Provided product information and sales support to retail
+                      customers.</span
+                    >
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary mt-1">•</span
+                    ><span
+                      >Directed clients to appropriate relationship managers
+                      when needed.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- Entry 2 -->
+              <div class="relative pl-8 border-l-2 border-primary/20">
+                <div
+                  class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary/40"
+                ></div>
+                <div
+                  class="flex flex-col md:flex-row md:justify-between md:items-start mb-4"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold dark:text-white">
+                      Accountant (Internship)
+                    </h3>
+                    <p class="text-primary font-medium">
+                      ST-ELECTROTOPO S.A.R.L — Oued Zem, Morocco
+                    </p>
+                  </div>
+                  <div class="mt-1 md:mt-0 text-right">
+                    <span
+                      class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-bold uppercase tracking-widest"
+                      >August 2017 – January 2018</span
+                    >
+                  </div>
+                </div>
+                <ul
+                  class="space-y-3 text-slate-600 dark:text-slate-400 leading-relaxed"
+                >
+                  <li class="flex gap-2">
+                    <span class="text-primary mt-1">•</span
+                    ><span
+                      >Processed accounting data and recorded financial
+                      transactions.</span
+                    >
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary mt-1">•</span
+                    ><span
+                      >Managed cash collections and maintained client
+                      relationships.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- Entry 3 -->
+              <div class="relative pl-8 border-l-2 border-primary/20">
+                <div
+                  class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary/40"
+                ></div>
+                <div
+                  class="flex flex-col md:flex-row md:justify-between md:items-start mb-4"
+                >
+                  <div>
+                    <h3 class="text-xl font-bold dark:text-white">
+                      Procurement Assistant (Internship)
+                    </h3>
+                    <p class="text-primary font-medium">
+                      OCP S.A. — Sidi Chennane, Morocco
+                    </p>
+                  </div>
+                  <div class="mt-1 md:mt-0 text-right">
+                    <span
+                      class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded text-xs font-bold uppercase tracking-widest"
+                      >February 2017</span
+                    >
+                  </div>
+                </div>
+                <ul
+                  class="space-y-3 text-slate-600 dark:text-slate-400 leading-relaxed"
+                >
+                  <li class="flex gap-2">
+                    <span class="text-primary mt-1">•</span
+                    ><span
+                      >Prepared and processed purchase orders efficiently.</span
+                    >
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary mt-1">•</span
+                    ><span
+                      >Managed inventory flows, including stock entries and
+                      exits of spare parts.</span
+                    >
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-primary mt-1">•</span
+                    ><span
+                      >Assisted in receiving imported goods and performed
+                      quality inspections.</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- Featured Projects -->
+          <section class="space-y-8">
+            <div class="flex items-center gap-4">
+              <h2
+                class="text-2xl font-bold dark:text-white whitespace-nowrap uppercase tracking-widest"
+              >
+                Key Projects
+              </h2>
+              <div class="h-px w-full bg-slate-200 dark:bg-primary/20"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Project 1 -->
+              <div
+                class="group bg-background-light dark:bg-slate-800/40 border border-slate-200 dark:border-primary/10 rounded-xl p-6 hover:border-primary/50 transition-all"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <span class="material-icons text-primary text-3xl"
+                    >analytics</span
+                  >
+                  <a
+                    class="text-slate-400 hover:text-primary transition-colors"
+                    href="#"
+                  >
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                </div>
+                <h4 class="font-bold text-lg dark:text-white mb-2">
+                  Credit Risk Decision System Project – November 2025
+                </h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                  Developed a credit default risk prediction system with class
+                  imbalance handling and decision threshold calibration to
+                  optimize business profitability.
+                </p>
+                <p class="text-xs text-slate-500 mb-3">
+                  Evaluation Metric: AUC-ROC
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="text-[10px] font-bold uppercase bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded"
+                    >Python</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded"
+                    >Pandas</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded"
+                    >Scikit-learn (Random Forest, Logistic Regression)</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded"
+                    >Streamlit</span
+                  >
+                </div>
+              </div>
+              <!-- Project 2 -->
+              <div
+                class="group bg-background-light dark:bg-slate-800/40 border border-slate-200 dark:border-primary/10 rounded-xl p-6 hover:border-primary/50 transition-all"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <span class="material-icons text-primary text-3xl">hub</span>
+                  <a
+                    class="text-slate-400 hover:text-primary transition-colors"
+                    href="#"
+                  >
+                    <span class="material-icons">open_in_new</span>
+                  </a>
+                </div>
+                <h4 class="font-bold text-lg dark:text-white mb-2">
+                  Final Year Project (FYP) – Avito Used Car Price Predictor –
+                  May–June 2025
+                </h4>
+                <p class="text-sm text-slate-600 dark:text-slate-400 mb-4">
+                  Built an automated data collection pipeline using web scraping
+                  and trained ensemble learning models for real-time used car
+                  price prediction.
+                </p>
+                <p class="text-xs text-slate-500 mb-3">
+                  Evaluation Metrics: R², MAE, RMSE
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="text-[10px] font-bold uppercase bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded"
+                    >Python</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded"
+                    >Selenium</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded"
+                    >Scikit-learn (XGBoost, LightGBM, CatBoost, Gradient
+                    Boosting)</span
+                  >
+                  <span
+                    class="text-[10px] font-bold uppercase bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded"
+                    >Streamlit</span
+                  >
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- Footer/Bottom Meta -->
+          <footer
+            class="pt-8 border-t border-slate-200 dark:border-primary/20 text-center text-xs text-slate-500 uppercase tracking-widest"
+          >
+            Last Updated: October 2026 — Made with
+            <span class="text-primary">♥</span>
+          </footer>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
