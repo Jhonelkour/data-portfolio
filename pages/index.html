@@ -138,13 +138,14 @@
           <div
             class="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start"
           >
-            <button
-              class="w-full sm:w-auto px-8 py-4 bg-primary text-white rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(19,127,236,0.4)] transition-all"
+            <a
+              href="projects.html"
+              class="w-full sm:w-auto inline-block text-center px-8 py-4 bg-primary text-white rounded-xl font-bold text-lg hover:shadow-[0_0_20px_rgba(19,127,236,0.4)] transition-all"
             >
               View My Projects
-            </button>
+            </a>
             <a
-              href="../assets/Cv Oussama El-Kourdini.pdf"
+              href="../assets/Cv_Oussama_El_Kourdini.pdf"
               download
               class="w-full sm:w-auto px-8 py-4 bg-background-light dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-lg hover:border-primary transition-all flex items-center justify-center gap-2"
             >
@@ -210,97 +211,104 @@
               class="hidden md:block h-px flex-1 mx-12 bg-gradient-to-r from-primary/20 to-transparent"
             ></div>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <!-- Python -->
-            <div
-              class="group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300"
+          <div class="relative">
+            <button
+              id="tech-left"
+              aria-label="Scroll left"
+              class="absolute -left-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 dark:bg-slate-800/80 p-2 rounded-full shadow-md hover:bg-primary/10"
             >
-              <div
-                class="w-12 h-12 mb-6 text-primary flex items-center justify-center"
-              >
-                <img
-                  src="../assets/images/Python.svg"
-                  alt="Python logo"
-                  class="w-full h-full object-contain"
-                />
-              </div>
-              <h3 class="font-bold text-lg mb-2">Python</h3>
-              <p class="text-sm text-slate-500 dark:text-slate-400">
-                Pandas, NumPy, Scikit-Learn
-              </p>
-            </div>
-            <!-- SQL -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
             <div
-              class="group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300"
+              id="tech-stack"
+              class="flex gap-6 overflow-x-auto no-scrollbar py-2 px-1 scroll-smooth"
             >
+              <!-- Python -->
               <div
-                class="w-12 h-12 mb-6 text-primary flex items-center justify-center"
+                class="min-w-[220px] flex-shrink-0 group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300"
               >
-                <img
-                  src="../assets/images/SQL.svg"
-                  alt="SQL logo"
-                  class="w-full h-full object-contain"
-                />
+                <div class="w-12 h-12 mb-6 text-primary flex items-center justify-center">
+                  <img src="../assets/images/Python.svg" alt="Python logo" class="w-full h-full object-contain" />
+                </div>
+                <h3 class="font-bold text-lg mb-2">Python</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Pandas, NumPy, Matplotlib, Seaborn</p>
               </div>
-              <h3 class="font-bold text-lg mb-2">SQL</h3>
-              <p class="text-sm text-slate-500 dark:text-slate-400">
-                PostgreSQL, MySQL, Microsoft SQL Server
-              </p>
+              <!-- SQL -->
+              <div class="min-w-[220px] flex-shrink-0 group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300">
+                <div class="w-12 h-12 mb-6 text-primary flex items-center justify-center">
+                  <img src="../assets/images/SQL.svg" alt="SQL logo" class="w-full h-full object-contain" />
+                </div>
+                <h3 class="font-bold text-lg mb-2">SQL</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">PostgreSQL, MySQL, Microsoft SQL Server</p>
+              </div>
+              <!-- Power BI -->
+              <div class="min-w-[220px] flex-shrink-0 group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300">
+                <div class="w-12 h-12 mb-6 text-primary flex items-center justify-center">
+                  <img src="../assets/images/Power bi.svg" alt="Power BI logo" class="w-full h-full object-contain" />
+                </div>
+                <h3 class="font-bold text-lg mb-2">Power BI</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">BI, Visual Storytelling, DAX</p>
+              </div>
+              <!-- TensorFlow -->
+              <div class="min-w-[220px] flex-shrink-0 group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300">
+                <div class="w-12 h-12 mb-6 text-primary flex items-center justify-center">
+                  <img src="../assets/images/TensorFlow.svg" alt="TensorFlow logo" class="w-full h-full object-contain" />
+                </div>
+                <h3 class="font-bold text-lg mb-2">TensorFlow</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Deep Learning</p>
+              </div>
+              <!-- Tableau -->
+              <div class="min-w-[220px] flex-shrink-0 group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300">
+                <div class="w-12 h-12 mb-6 text-primary flex items-center justify-center">
+                  <img src="../assets/images/Tableau.svg" alt="Tableau logo" class="w-full h-full object-contain" />
+                </div>
+                <h3 class="font-bold text-lg mb-2">Tableau</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">BI, Visual Storytelling</p>
+              </div>
+              <!-- Scikit-Learn -->
+              <div class="min-w-[220px] flex-shrink-0 group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300">
+                <div class="w-12 h-12 mb-6 text-primary flex items-center justify-center">
+                  <img src="../assets/images/scikit-learn-seeklogo.svg" alt="Scikit-Learn logo" class="w-full h-full object-contain" />
+                </div>
+                <h3 class="font-bold text-lg mb-2">Scikit-Learn</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Machine learning</p>
+              </div>
+              <!-- Excel -->
+              <div class="min-w-[220px] flex-shrink-0 group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300">
+                <div class="w-12 h-12 mb-6 text-primary flex items-center justify-center">
+                  <img src="../assets/images/Excel.svg" alt="Excel logo" class="w-full h-full object-contain" />
+                </div>
+                <h3 class="font-bold text-lg mb-2">Excel</h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400">Data wrangling, Pivot Tables</p>
+              </div>
             </div>
-            <!-- Power BI -->
-            <div
-              class="group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300"
+            <button
+              id="tech-right"
+              aria-label="Scroll right"
+              class="absolute -right-2 top-1/2 -translate-y-1/2 z-10 bg-white/90 dark:bg-slate-800/80 p-2 rounded-full shadow-md hover:bg-primary/10"
             >
-              <div
-                class="w-12 h-12 mb-6 text-primary flex items-center justify-center"
-              >
-                <img
-                  src="../assets/images/Power bi.svg"
-                  alt="Power BI logo"
-                  class="w-full h-full object-contain"
-                />
-              </div>
-              <h3 class="font-bold text-lg mb-2">Power BI</h3>
-              <p class="text-sm text-slate-500 dark:text-slate-400">
-                BI, Visual Storytelling
-              </p>
-            </div>
-            <!-- TensorFlow -->
-            <div
-              class="group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300"
-            >
-              <div
-                class="w-12 h-12 mb-6 text-primary flex items-center justify-center"
-              >
-                <img
-                  src="../assets/images/TensorFlow.svg"
-                  alt="TensorFlow logo"
-                  class="w-full h-full object-contain"
-                />
-              </div>
-              <h3 class="font-bold text-lg mb-2">TensorFlow</h3>
-              <p class="text-sm text-slate-500 dark:text-slate-400">
-                Deep Learning, Keras, CNNs
-              </p>
-            </div>
-            <!-- Tableau -->
-            <div
-              class="group p-8 rounded-2xl bg-white dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all duration-300"
-            >
-              <div
-                class="w-12 h-12 mb-6 text-primary flex items-center justify-center"
-              >
-                <img
-                  src="../assets/images/Tableau.svg"
-                  alt="Tableau logo"
-                  class="w-full h-full object-contain"
-                />
-              </div>
-              <h3 class="font-bold text-lg mb-2">Tableau</h3>
-              <p class="text-sm text-slate-500 dark:text-slate-400">
-                BI, Visual Storytelling
-              </p>
-            </div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+            <style>
+              .no-scrollbar::-webkit-scrollbar{display:none}
+              .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+            </style>
+            <script>
+              (function(){
+                const container = document.getElementById('tech-stack');
+                const left = document.getElementById('tech-left');
+                const right = document.getElementById('tech-right');
+                if(!container||!left||!right) return;
+                left.addEventListener('click', ()=> container.scrollBy({left: -300, behavior: 'smooth'}));
+                right.addEventListener('click', ()=> container.scrollBy({left: 300, behavior: 'smooth'}));
+              })();
+            </script>
+          </div>
+            <!-- Removed duplicate Scikit-Learn and Excel cards -->
           </div>
         </div>
       </section>
