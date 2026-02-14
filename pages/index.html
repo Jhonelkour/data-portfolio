@@ -119,7 +119,7 @@
       <section
         class="max-w-7xl mx-auto px-6 py-24 md:py-32 relative flex flex-col md:flex-row items-center justify-between gap-12"
       >
-        <div class="flex-1 text-center md:text-left">
+        <div id="hero-text" class="flex-1 text-center md:text-left transform transition-all duration-700 ease-out opacity-0 -translate-x-10">
           <div
             class="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-semibold mb-6"
           >
@@ -192,6 +192,7 @@
           </div>
         </div>
       </section>
+      
       <!-- Tech Stack Section -->
       <section
         class="py-24 px-6 relative border-y border-primary/5 bg-slate-50/50 dark:bg-white/5 backdrop-blur-sm"
@@ -407,7 +408,8 @@
       <!-- CTA Section -->
       <section class="py-24 px-6">
         <div
-          class="max-w-4xl mx-auto rounded-3xl bg-primary p-12 text-center text-white relative overflow-hidden"
+          id="cta-box"
+          class="max-w-4xl mx-auto rounded-3xl bg-primary p-12 text-center text-white relative overflow-hidden transform transition-all duration-700 ease-out opacity-0 translate-y-10"
         >
           <!-- Abstract Pattern Over CTA -->
           <div
@@ -420,7 +422,7 @@
             Ready to build something impactful?
           </h2>
           <p class="text-white/80 text-lg mb-10 max-w-xl mx-auto relative z-10">
-            I'm currently seeking internship opportunities for Fall 2024. Let's
+            I'm currently seeking internship opportunities for Spring 2026. Let's
             discuss how data can transform your workflow.
           </p>
           <div
@@ -439,6 +441,44 @@
           </div>
         </div>
       </section>
+      <script>
+        // Reveal elements on scroll using IntersectionObserver.
+        (function(){
+          const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          // user must perform a scroll action before elements with triggerOnScroll=true reveal
+          let userScrolled = false;
+          function onFirstScroll(){ userScrolled = true; window.removeEventListener('scroll', onFirstScroll); }
+          window.addEventListener('scroll', onFirstScroll, {passive:true});
+
+          function revealOnScroll(el, {from='bottom', triggerOnScroll=false} = {}){
+            if(!el) return;
+            if(prefersReduced){
+              el.classList.remove('opacity-0','-translate-x-10','translate-y-10');
+              el.classList.add('opacity-100','translate-x-0','translate-y-0');
+              return;
+            }
+
+            const io = new IntersectionObserver((entries, obs)=>{
+              entries.forEach(entry=>{
+                if(!entry.isIntersecting) return;
+                // if this element requires explicit user scroll before revealing, wait
+                if(triggerOnScroll && !userScrolled) return;
+                const node = entry.target;
+                node.classList.remove('opacity-0','-translate-x-10','translate-y-10');
+                node.classList.add('opacity-100','translate-x-0','translate-y-0');
+                obs.unobserve(node);
+              });
+            }, {threshold: 0.15});
+
+            io.observe(el);
+          }
+
+          document.addEventListener('DOMContentLoaded', function(){
+            revealOnScroll(document.getElementById('hero-text'), {from:'left', triggerOnScroll:false});
+            revealOnScroll(document.getElementById('cta-box'), {from:'bottom', triggerOnScroll:false});
+          });
+        })();
+      </script>
     </main>
     <!-- Footer -->
     <footer class="py-12 px-6 border-t border-primary/10">
