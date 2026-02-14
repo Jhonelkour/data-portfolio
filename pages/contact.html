@@ -275,7 +275,7 @@
           <p id="formMessage" class="mt-4 text-center text-sm"></p>
         </form>
         <script>
-          // Simple client-side handling for Formspree responses
+          // Debugging Formspree submissions — logs response & body to console
           const form = document.getElementById("contactForm");
           const msg = document.getElementById("formMessage");
           form.addEventListener("submit", async (e) => {
@@ -288,16 +288,29 @@
                 headers: { Accept: "application/json" },
                 body: data,
               });
+              console.log("Formspree response: ", res);
+              const bodyText = await res.text();
+              console.log("Response body (text):", bodyText);
+              let json = null;
+              try {
+                json = bodyText ? JSON.parse(bodyText) : null;
+                console.log("Parsed JSON:", json);
+              } catch (parseErr) {
+                console.log("Response not JSON:", parseErr);
+              }
+
               if (res.ok) {
                 msg.textContent = "Message sent — thank you!";
                 form.reset();
               } else {
-                const json = await res.json();
                 msg.textContent =
-                  json && json.error ? json.error : "Error sending message.";
+                  (json && (json.error || json.message)) ||
+                  `Error sending message (status ${res.status}).`;
               }
             } catch (err) {
-              msg.textContent = "Network error — please try again later.";
+              console.error("Fetch error:", err);
+              msg.textContent =
+                "Network error — please check console and try again.";
             }
           });
         </script>
